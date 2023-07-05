@@ -32,6 +32,12 @@
     <button mat-raised-button color="primary" type="submit">Submit</button>
   </form>
 
-  <p style="white-space: pre;" *ngIf="solved === ''; else solutionBlock">Please enter the form above and solve!</p>
-  <ng-template #solutionBlock>{{solved}}</ng-template>
+  <p *ngIf="!solved;">Please enter the form above and solve!</p>
+  <p *ngIf="solved?.length === 0">No solution found</p>
+  <div *ngIf="solved?.length > 0">
+    <p>Solution found: </p>
+    <ul>
+      <li *ngFor="let item of solved">{{ item }}</li>
+    </ul>
+  </div>
 </div>

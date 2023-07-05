@@ -1,7 +1,10 @@
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Component } from '@angular/core';
-import { findSolution } from 'src/app/utils/solve-digits.util';
+import { HttpClient } from '@angular/common/http';
+
+// const URL = 'http://127.0.0.1:8000';
+const URL = 'https://solvedigitsapi-1-a7154843.deta.app';
 
 @Component({
   selector: 'app-solve',
@@ -19,27 +22,24 @@ export class SolveComponent {
     total: [null, Validators.required],
   });
 
-  public solved: string = '';
+  public solved: any;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private http: HttpClient) {}
 
   solveDigits() {
     if (this.form.valid) {
-      const inputs = Object.values(this.form.value) as number[];
-      const total = inputs.splice(6)[0];
-      console.log(inputs, total);
+      const numbers = Object.values(this.form.value) as number[];
+      const total = numbers.splice(6)[0];
+      console.log(numbers, total);
 
-      const solution = findSolution(inputs, total);
-
-      if (solution !== null) {
-        this.solved = 'Solution found:';
-        for (let step of solution) {
-          this.solved += `${step.num1} ${step.op.symbol} ${step.num2} = ${step.result}\n`;
+      this.http.post(`${URL}/find_solution`, { numbers, total }).subscribe(
+        (data) => {
+          this.solved = data;
+        },
+        (error) => {
+          console.error('Error:', error);
         }
-      } else {
-        this.solved = 'No solution found';
-      }
-      // const solution = findSolution();
+      );
     }
   }
 }
