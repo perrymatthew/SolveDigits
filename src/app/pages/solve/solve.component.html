@@ -1,0 +1,37 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+  <form [formGroup]="form" (ngSubmit)="solveDigits()" fxLayout="column" fxLayoutGap="10px"
+    style="width: 100%; max-width: 300px;">
+    <mat-form-field>
+      <mat-label>Number 1</mat-label>
+      <input matInput formControlName="num1" type="number">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Number 2</mat-label>
+      <input matInput formControlName="num2" type="number">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Number 3</mat-label>
+      <input matInput formControlName="num3" type="number">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Number 4</mat-label>
+      <input matInput formControlName="num4" type="number">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Number 5</mat-label>
+      <input matInput formControlName="num5" type="number">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Number 6</mat-label>
+      <input matInput formControlName="num6" type="number">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Desired Total</mat-label>
+      <input matInput formControlName="total" type="number">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+
+  <p style="white-space: pre;" *ngIf="solved === ''; else solutionBlock">Please enter the form above and solve!</p>
+  <ng-template #solutionBlock>{{solved}}</ng-template>
+</div>
