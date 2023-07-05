@@ -1,0 +1,81 @@
+{
+  "configVersion": 1,
+  "timestamp": 1688554860932,
+  "index": "/SolveDigits/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/SolveDigits/favicon.ico",
+        "/SolveDigits/index.html",
+        "/SolveDigits/main.6ea7f9cd52a23d3c.js",
+        "/SolveDigits/manifest.webmanifest",
+        "/SolveDigits/polyfills.408f3ddaad18417c.js",
+        "/SolveDigits/runtime.81646ff234debcb7.js",
+        "/SolveDigits/styles.9cbd8e7860fe6bd8.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/SolveDigits/assets/icons/icon-128x128.png",
+        "/SolveDigits/assets/icons/icon-144x144.png",
+        "/SolveDigits/assets/icons/icon-152x152.png",
+        "/SolveDigits/assets/icons/icon-192x192.png",
+        "/SolveDigits/assets/icons/icon-384x384.png",
+        "/SolveDigits/assets/icons/icon-512x512.png",
+        "/SolveDigits/assets/icons/icon-72x72.png",
+        "/SolveDigits/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/SolveDigits/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
+    "/SolveDigits/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
+    "/SolveDigits/assets/icons/icon-152x152.png": "b1fbbee3902eb96a7658e3bb006f31f78ca5a44c",
+    "/SolveDigits/assets/icons/icon-192x192.png": "e4211163bf0911688fbfb80278d8ff4d2f77691d",
+    "/SolveDigits/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/SolveDigits/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/SolveDigits/assets/icons/icon-72x72.png": "279825a1ac4377032ae996a1832c641e33ccf1b6",
+    "/SolveDigits/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
+    "/SolveDigits/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/SolveDigits/index.html": "f4330ef485dd351e523dc3622b2747599f0c7c88",
+    "/SolveDigits/main.6ea7f9cd52a23d3c.js": "03e1557da9cf69ba2363b081e5d97a078e4a4448",
+    "/SolveDigits/manifest.webmanifest": "43c751cb82f7123aa48d668c9e8d4d4c54801544",
+    "/SolveDigits/polyfills.408f3ddaad18417c.js": "24aa7fc95414adf0e933e491204712ef661cbf49",
+    "/SolveDigits/runtime.81646ff234debcb7.js": "6d6d422bcf64fe4c79a572e7cd451b0c33f86f8c",
+    "/SolveDigits/styles.9cbd8e7860fe6bd8.css": "6b8918493712442b98fe1127040e6c10a11764c2"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
