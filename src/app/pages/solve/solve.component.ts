@@ -23,11 +23,13 @@ export class SolveComponent {
   });
 
   public solved: any;
+  public loading: boolean = false;
 
   constructor(private fb: FormBuilder, private http: HttpClient) {}
 
   solveDigits() {
     if (this.form.valid) {
+      this.loading = true;
       const numbers = Object.values(this.form.value) as number[];
       const total = numbers.splice(6)[0];
       console.log(numbers, total);
@@ -35,9 +37,11 @@ export class SolveComponent {
       this.http.post(`${URL}/find_solution`, { numbers, total }).subscribe(
         (data) => {
           this.solved = data;
+          this.loading = false;
         },
         (error) => {
           console.error('Error:', error);
+          this.loading = false;
         }
       );
     }
